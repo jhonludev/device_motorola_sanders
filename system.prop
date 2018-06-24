@@ -114,6 +114,9 @@ persist.hwc.enable_vds=1
 debug.sf.recomputecrop=0
 debug.enable.sglscale=1
 
+# DTV
+ro.hw.dtv=true
+
 # FM
 ro.fm.transmitter=false
 
