@@ -19,7 +19,7 @@
 $(call inherit-product, device/motorola/sanders/full_sanders.mk)
 
 # Inherit some common Cardinal-Aosp stuff.
-$(call inherit-product, vendor/cardinal/common.mk)
+$(call inherit-product, vendor/toxyc/config/common_full_phone.mk)
 
 # Boot animation
 TARGET_SCREEN_WIDTH := 1080
@@ -27,7 +27,7 @@ TARGET_SCREEN_HEIGHT := 1920
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := sanders
-PRODUCT_NAME := cardinal_sanders
+PRODUCT_NAME := toxyc_sanders
 PRODUCT_BRAND := motorola
 PRODUCT_MANUFACTURER := motorola
 
@@ -35,3 +35,9 @@ PRODUCT_SYSTEM_PROPERTY_BLACKLIST := ro.product.model
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME="Moto G5S Plus"
+
+#export
+TOXYC_BUILD_TYPE=OFFICIAL
+
+# Inherit telephony stuff
+$(call inherit-product, vendor/toxyc/config/caf_fw.mk)
